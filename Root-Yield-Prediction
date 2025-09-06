@@ -7,7 +7,14 @@ import xgboost as xgb
 import matplotlib.pyplot as plt
 
 # 1. Load data
-field_data = pd.read_csv("field_data.csv")
+field_data = pd.read_csv(r"C:\Users\chryk\Downloads\Dataset\8_field_data.csv", encoding="latin1", sep=";")   # <-- THIS IS CRUCIAL)
+
+# Clean column names (remove spaces, BOMs, etc.)
+field_data.columns = field_data.columns.str.strip().str.lower()
+print(repr(field_data.columns.tolist()))
+
+print(field_data.columns.tolist())  # check if "date" is there
+
 
 # 2. Basic cleaning
 # Convert date if needed
