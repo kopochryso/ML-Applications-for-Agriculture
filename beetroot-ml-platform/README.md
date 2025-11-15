@@ -23,8 +23,8 @@ It also includes MLOps components, such as data pipelines, model versioning, exp
 beetroot-ml-platform/     
 │     
 ├── data/        
-│     ├── raw/                         # Original dataset
-│     ├── processed/                # Cleaned + engineered data
+│   ├── raw/                         # Original dataset
+│   ├── processed/                # Cleaned + engineered data
 │   
 ├── notebooks/  
 │   ├── EDA.ipynb                 # Exploratory data analysis
