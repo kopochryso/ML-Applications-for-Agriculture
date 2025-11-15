@@ -27,30 +27,30 @@ beetroot-ml-platform/
 │     ├── processed/               # Cleaned + engineered data              
 │   
 ├── notebooks/  
-│   ├── EDA.ipynb                 # Exploratory data analysis
-│   ├── FeatureEngineering.ipynb    
-│   ├── ModelTraining.ipynb 
+│   ├── EDA.ipynb                 # Exploratory data analysis            
+│   ├── FeatureEngineering.ipynb                    
+│   ├── ModelTraining.ipynb                 
 │   
-├── src/    
-│   ├── data_pipeline.py        # Automatic preprocessing pipeline
-│   ├── train_model.py        # Training script (CLI)
-│   ├── evaluate.py          # Evaluation + SHAP explainability
-│   ├── inference_api.py        # FastAPI microservice for deployment
-│   
-├── models/ 
+├── src/                
+│   ├── data_pipeline.py        # Automatic preprocessing pipeline        
+│   ├── train_model.py        # Training script (CLI)        
+│   ├── evaluate.py          # Evaluation + SHAP explainability          
+│   ├── inference_api.py        # FastAPI microservice for deployment          
+│           
+├── models/               
 │   ├── model_latest.pkl    
-│   ├── model_v1/              # Versioned models
-│   
-├── mlflow/                  # MLflow experiment logs
-├── docker/ 
-│   ├── Dockerfile  
-│   
-├── tests/  
-│   ├── test_preprocessing.py   
-│   ├── test_inference.py   
-│   
-├── requirements.txt    
-└── README.md   
+│   ├── model_v1/              # Versioned models            
+│                 
+├── mlflow/                  # MLflow experiment logs          
+├── docker/               
+│   ├── Dockerfile            
+│         
+├── tests/              
+│   ├── test_preprocessing.py             
+│   ├── test_inference.py           
+│             
+├── requirements.txt                
+└── README.md         
 
 
 
