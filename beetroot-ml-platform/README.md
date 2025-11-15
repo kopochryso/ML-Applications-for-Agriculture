@@ -20,11 +20,11 @@ It also includes MLOps components, such as data pipelines, model versioning, exp
 
 
 📁 Repository Structure
-beetroot-ml-platform/   
-│   
-├── data/      
-│   ├── raw/                       # Original dataset
-│   ├── processed/              # Cleaned + engineered data
+beetroot-ml-platform/     
+│     
+├── data/        
+│     ├── raw/                         # Original dataset
+│     ├── processed/                # Cleaned + engineered data
 │   
 ├── notebooks/  
 │   ├── EDA.ipynb                 # Exploratory data analysis
