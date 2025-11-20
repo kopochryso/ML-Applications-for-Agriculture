@@ -1,16 +1,21 @@
-# api.py
 from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
 import onnxruntime as rt
+from pathlib import Path
 
 app = FastAPI(title="Beetroot Root Yield Prediction API")
 
 # ---- 1. Load ONNX model at startup ----
-ONNX_PATH = "root_yield_model.onnx"
-sess = rt.InferenceSession(ONNX_PATH, providers=["CPUExecutionProvider"])
+BASE_DIR = Path(__file__).resolve().parent          # /app/scripts inside container
+ONNX_PATH = BASE_DIR.parent / "models" / "root_yield_model.onnx"
+
+print("Loading ONNX model from:", ONNX_PATH)
+
+sess = rt.InferenceSession(str(ONNX_PATH), providers=["CPUExecutionProvider"])
 input_name = sess.get_inputs()[0].name
 output_name = sess.get_outputs()[0].name
+
 
 # ---- 2. Define feature order exactly as in training ----
 FEATURE_ORDER = [
